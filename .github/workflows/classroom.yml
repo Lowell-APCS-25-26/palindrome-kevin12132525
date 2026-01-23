@@ -40,13 +40,13 @@ jobs:
         command: gradle test --tests "*testRewriter*"
         timeout: 10
         max-score: 1
-    - name: testNursesRun
-      id: testnursesrun
+    - name: testNusesRun
+      id: testnusesrun
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: testNursesRun
+        test-name: testNusesRun
         setup-command: ''
-        command: gradle test --tests "*testNursesRun*"
+        command: gradle test --tests "*testNusesRun*"
         timeout: 10
         max-score: 1
     - name: testMadamImAdam
@@ -73,8 +73,8 @@ jobs:
         TESTTEST_RESULTS: "${{steps.testtest.outputs.result}}"
         TESTROTATOR_RESULTS: "${{steps.testrotator.outputs.result}}"
         TESTREWRITER_RESULTS: "${{steps.testrewriter.outputs.result}}"
-        TESTNURSESRUN_RESULTS: "${{steps.testnursesrun.outputs.result}}"
+        TESTNUSESRUN_RESULTS: "${{steps.testnusesrun.outputs.result}}"
         TESTMADAMIMADAM_RESULTS: "${{steps.testmadamimadam.outputs.result}}"
         TESTAMANAPLANACANALPANAMA_RESULTS: "${{steps.testamanaplanacanalpanama.outputs.result}}"
       with:
-        runners: testtest,testrotator,testrewriter,testnursesrun,testmadamimadam,testamanaplanacanalpanama
+        runners: testtest,testrotator,testrewriter,testnusesrun,testmadamimadam,testamanaplanacanalpanama
